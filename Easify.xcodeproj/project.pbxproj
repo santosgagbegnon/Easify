@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BF937C0214E1BBA00F002DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937BF214E1BBA00F002DD /* AppDelegate.swift */; };
+		6BF937C2214E1BBA00F002DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937C1214E1BBA00F002DD /* ViewController.swift */; };
+		6BF937C5214E1BBA00F002DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF937C3214E1BBA00F002DD /* Main.storyboard */; };
+		6BF937C8214E1BBA00F002DD /* Easify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937C6214E1BBA00F002DD /* Easify.xcdatamodeld */; };
+		6BF937CA214E1BBD00F002DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF937C9214E1BBD00F002DD /* Assets.xcassets */; };
+		6BF937CD214E1BBD00F002DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF937CB214E1BBD00F002DD /* LaunchScreen.storyboard */; };
+		6BF937D8214E1BBD00F002DD /* EasifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937D7214E1BBD00F002DD /* EasifyTests.swift */; };
+		6BF937E3214E1BBD00F002DD /* EasifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937E2214E1BBD00F002DD /* EasifyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BF937D4214E1BBD00F002DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BF937B4214E1BBA00F002DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BF937BB214E1BBA00F002DD;
+			remoteInfo = Easify;
+		};
+		6BF937DF214E1BBD00F002DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BF937B4214E1BBA00F002DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BF937BB214E1BBA00F002DD;
+			remoteInfo = Easify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6BF937BC214E1BBA00F002DD /* Easify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF937BF214E1BBA00F002DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6BF937C1214E1BBA00F002DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BF937C4214E1BBA00F002DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6BF937C7214E1BBA00F002DD /* Easify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Easify.xcdatamodel; sourceTree = "<group>"; };
+		6BF937C9214E1BBD00F002DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BF937CC214E1BBD00F002DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BF937CE214E1BBD00F002DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF937D3214E1BBD00F002DD /* EasifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF937D7214E1BBD00F002DD /* EasifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasifyTests.swift; sourceTree = "<group>"; };
+		6BF937D9214E1BBD00F002DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF937DE214E1BBD00F002DD /* EasifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF937E2214E1BBD00F002DD /* EasifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasifyUITests.swift; sourceTree = "<group>"; };
+		6BF937E4214E1BBD00F002DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BF937B9214E1BBA00F002DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF937D0214E1BBD00F002DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF937DB214E1BBD00F002DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BF937B3214E1BBA00F002DD = {
+			isa = PBXGroup;
+			children = (
+				6BF937BE214E1BBA00F002DD /* Easify */,
+				6BF937D6214E1BBD00F002DD /* EasifyTests */,
+				6BF937E1214E1BBD00F002DD /* EasifyUITests */,
+				6BF937BD214E1BBA00F002DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BF937BD214E1BBA00F002DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BF937BC214E1BBA00F002DD /* Easify.app */,
+				6BF937D3214E1BBD00F002DD /* EasifyTests.xctest */,
+				6BF937DE214E1BBD00F002DD /* EasifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BF937BE214E1BBA00F002DD /* Easify */ = {
+			isa = PBXGroup;
+			children = (
+				6BF937BF214E1BBA00F002DD /* AppDelegate.swift */,
+				6BF937C1214E1BBA00F002DD /* ViewController.swift */,
+				6BF937C3214E1BBA00F002DD /* Main.storyboard */,
+				6BF937C9214E1BBD00F002DD /* Assets.xcassets */,
+				6BF937CB214E1BBD00F002DD /* LaunchScreen.storyboard */,
+				6BF937CE214E1BBD00F002DD /* Info.plist */,
+				6BF937C6214E1BBA00F002DD /* Easify.xcdatamodeld */,
+			);
+			path = Easify;
+			sourceTree = "<group>";
+		};
+		6BF937D6214E1BBD00F002DD /* EasifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BF937D7214E1BBD00F002DD /* EasifyTests.swift */,
+				6BF937D9214E1BBD00F002DD /* Info.plist */,
+			);
+			path = EasifyTests;
+			sourceTree = "<group>";
+		};
+		6BF937E1214E1BBD00F002DD /* EasifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6BF937E2214E1BBD00F002DD /* EasifyUITests.swift */,
+				6BF937E4214E1BBD00F002DD /* Info.plist */,
+			);
+			path = EasifyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BF937BB214E1BBA00F002DD /* Easify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BF937E7214E1BBD00F002DD /* Build configuration list for PBXNativeTarget "Easify" */;
+			buildPhases = (
+				6BF937B8214E1BBA00F002DD /* Sources */,
+				6BF937B9214E1BBA00F002DD /* Frameworks */,
+				6BF937BA214E1BBA00F002DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Easify;
+			productName = Easify;
+			productReference = 6BF937BC214E1BBA00F002DD /* Easify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BF937D2214E1BBD00F002DD /* EasifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BF937EA214E1BBD00F002DD /* Build configuration list for PBXNativeTarget "EasifyTests" */;
+			buildPhases = (
+				6BF937CF214E1BBD00F002DD /* Sources */,
+				6BF937D0214E1BBD00F002DD /* Frameworks */,
+				6BF937D1214E1BBD00F002DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BF937D5214E1BBD00F002DD /* PBXTargetDependency */,
+			);
+			name = EasifyTests;
+			productName = EasifyTests;
+			productReference = 6BF937D3214E1BBD00F002DD /* EasifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6BF937DD214E1BBD00F002DD /* EasifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BF937ED214E1BBD00F002DD /* Build configuration list for PBXNativeTarget "EasifyUITests" */;
+			buildPhases = (
+				6BF937DA214E1BBD00F002DD /* Sources */,
+				6BF937DB214E1BBD00F002DD /* Frameworks */,
+				6BF937DC214E1BBD00F002DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BF937E0214E1BBD00F002DD /* PBXTargetDependency */,
+			);
+			name = EasifyUITests;
+			productName = EasifyUITests;
+			productReference = 6BF937DE214E1BBD00F002DD /* EasifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BF937B4214E1BBA00F002DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Santos;
+				TargetAttributes = {
+					6BF937BB214E1BBA00F002DD = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					6BF937D2214E1BBD00F002DD = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 6BF937BB214E1BBA00F002DD;
+					};
+					6BF937DD214E1BBD00F002DD = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 6BF937BB214E1BBA00F002DD;
+					};
+				};
+			};
+			buildConfigurationList = 6BF937B7214E1BBA00F002DD /* Build configuration list for PBXProject "Easify" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BF937B3214E1BBA00F002DD;
+			productRefGroup = 6BF937BD214E1BBA00F002DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BF937BB214E1BBA00F002DD /* Easify */,
+				6BF937D2214E1BBD00F002DD /* EasifyTests */,
+				6BF937DD214E1BBD00F002DD /* EasifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BF937BA214E1BBA00F002DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BF937CD214E1BBD00F002DD /* LaunchScreen.storyboard in Resources */,
+				6BF937CA214E1BBD00F002DD /* Assets.xcassets in Resources */,
+				6BF937C5214E1BBA00F002DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF937D1214E1BBD00F002DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF937DC214E1BBD00F002DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BF937B8214E1BBA00F002DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BF937C2214E1BBA00F002DD /* ViewController.swift in Sources */,
+				6BF937C0214E1BBA00F002DD /* AppDelegate.swift in Sources */,
+				6BF937C8214E1BBA00F002DD /* Easify.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF937CF214E1BBD00F002DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BF937D8214E1BBD00F002DD /* EasifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF937DA214E1BBD00F002DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BF937E3214E1BBD00F002DD /* EasifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BF937D5214E1BBD00F002DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BF937BB214E1BBA00F002DD /* Easify */;
+			targetProxy = 6BF937D4214E1BBD00F002DD /* PBXContainerItemProxy */;
+		};
+		6BF937E0214E1BBD00F002DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BF937BB214E1BBA00F002DD /* Easify */;
+			targetProxy = 6BF937DF214E1BBD00F002DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BF937C3214E1BBA00F002DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BF937C4214E1BBA00F002DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6BF937CB214E1BBD00F002DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BF937CC214E1BBD00F002DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BF937E5214E1BBD00F002DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6BF937E6214E1BBD00F002DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BF937E8214E1BBD00F002DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SMEHD3WMB9;
+				INFOPLIST_FILE = Easify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santos.gagbegnon.Easify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6BF937E9214E1BBD00F002DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SMEHD3WMB9;
+				INFOPLIST_FILE = Easify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santos.gagbegnon.Easify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6BF937EB214E1BBD00F002DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SMEHD3WMB9;
+				INFOPLIST_FILE = EasifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santos.gagbegnon.EasifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easify.app/Easify";
+			};
+			name = Debug;
+		};
+		6BF937EC214E1BBD00F002DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SMEHD3WMB9;
+				INFOPLIST_FILE = EasifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santos.gagbegnon.EasifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easify.app/Easify";
+			};
+			name = Release;
+		};
+		6BF937EE214E1BBD00F002DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SMEHD3WMB9;
+				INFOPLIST_FILE = EasifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santos.gagbegnon.EasifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Easify;
+			};
+			name = Debug;
+		};
+		6BF937EF214E1BBD00F002DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SMEHD3WMB9;
+				INFOPLIST_FILE = EasifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santos.gagbegnon.EasifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Easify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BF937B7214E1BBA00F002DD /* Build configuration list for PBXProject "Easify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BF937E5214E1BBD00F002DD /* Debug */,
+				6BF937E6214E1BBD00F002DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BF937E7214E1BBD00F002DD /* Build configuration list for PBXNativeTarget "Easify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BF937E8214E1BBD00F002DD /* Debug */,
+				6BF937E9214E1BBD00F002DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BF937EA214E1BBD00F002DD /* Build configuration list for PBXNativeTarget "EasifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BF937EB214E1BBD00F002DD /* Debug */,
+				6BF937EC214E1BBD00F002DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BF937ED214E1BBD00F002DD /* Build configuration list for PBXNativeTarget "EasifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BF937EE214E1BBD00F002DD /* Debug */,
+				6BF937EF214E1BBD00F002DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6BF937C6214E1BBA00F002DD /* Easify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6BF937C7214E1BBA00F002DD /* Easify.xcdatamodel */,
+			);
+			currentVersion = 6BF937C7214E1BBA00F002DD /* Easify.xcdatamodel */;
+			path = Easify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6BF937B4214E1BBA00F002DD /* Project object */;
+}

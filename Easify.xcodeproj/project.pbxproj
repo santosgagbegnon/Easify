@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6BF937C0214E1BBA00F002DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937BF214E1BBA00F002DD /* AppDelegate.swift */; };
-		6BF937C2214E1BBA00F002DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937C1214E1BBA00F002DD /* ViewController.swift */; };
+		6BF937C2214E1BBA00F002DD /* TagsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937C1214E1BBA00F002DD /* TagsListViewController.swift */; };
 		6BF937C5214E1BBA00F002DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF937C3214E1BBA00F002DD /* Main.storyboard */; };
 		6BF937C8214E1BBA00F002DD /* Easify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937C6214E1BBA00F002DD /* Easify.xcdatamodeld */; };
 		6BF937CA214E1BBD00F002DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF937C9214E1BBD00F002DD /* Assets.xcassets */; };
 		6BF937CD214E1BBD00F002DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF937CB214E1BBD00F002DD /* LaunchScreen.storyboard */; };
 		6BF937D8214E1BBD00F002DD /* EasifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937D7214E1BBD00F002DD /* EasifyTests.swift */; };
 		6BF937E3214E1BBD00F002DD /* EasifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937E2214E1BBD00F002DD /* EasifyUITests.swift */; };
+		6BF937F1214E219600F002DD /* ShopifyAPIStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937F0214E219600F002DD /* ShopifyAPIStructs.swift */; };
+		6BF937F3214E26B900F002DD /* TagsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937F2214E26B900F002DD /* TagsListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		6BF937BC214E1BBA00F002DD /* Easify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF937BF214E1BBA00F002DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6BF937C1214E1BBA00F002DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BF937C1214E1BBA00F002DD /* TagsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsListViewController.swift; sourceTree = "<group>"; };
 		6BF937C4214E1BBA00F002DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BF937C7214E1BBA00F002DD /* Easify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Easify.xcdatamodel; sourceTree = "<group>"; };
 		6BF937C9214E1BBD00F002DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		6BF937DE214E1BBD00F002DD /* EasifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF937E2214E1BBD00F002DD /* EasifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasifyUITests.swift; sourceTree = "<group>"; };
 		6BF937E4214E1BBD00F002DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF937F0214E219600F002DD /* ShopifyAPIStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyAPIStructs.swift; sourceTree = "<group>"; };
+		6BF937F2214E26B900F002DD /* TagsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				6BF937BF214E1BBA00F002DD /* AppDelegate.swift */,
-				6BF937C1214E1BBA00F002DD /* ViewController.swift */,
+				6BF937C1214E1BBA00F002DD /* TagsListViewController.swift */,
+				6BF937F2214E26B900F002DD /* TagsListModel.swift */,
+				6BF937F0214E219600F002DD /* ShopifyAPIStructs.swift */,
 				6BF937C3214E1BBA00F002DD /* Main.storyboard */,
 				6BF937C9214E1BBD00F002DD /* Assets.xcassets */,
 				6BF937CB214E1BBD00F002DD /* LaunchScreen.storyboard */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BF937C2214E1BBA00F002DD /* ViewController.swift in Sources */,
+				6BF937C2214E1BBA00F002DD /* TagsListViewController.swift in Sources */,
 				6BF937C0214E1BBA00F002DD /* AppDelegate.swift in Sources */,
+				6BF937F3214E26B900F002DD /* TagsListModel.swift in Sources */,
+				6BF937F1214E219600F002DD /* ShopifyAPIStructs.swift in Sources */,
 				6BF937C8214E1BBA00F002DD /* Easify.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

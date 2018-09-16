@@ -29,6 +29,7 @@ struct Product : Decodable {
     let tags : String?
     let template_suffix : String?
     let title: String?
+    var total_quantity : Int?
     let updated_at: String?
     let variants: [ProductVariant]?
     let vendor : String?

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BF30136214EB79D000C2DAB /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF30135214EB79D000C2DAB /* ProductCollectionViewCell.swift */; };
+		6BF30138214EB8C6000C2DAB /* ProductsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF30137214EB8C6000C2DAB /* ProductsCollectionViewController.swift */; };
 		6BF937C0214E1BBA00F002DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937BF214E1BBA00F002DD /* AppDelegate.swift */; };
 		6BF937C2214E1BBA00F002DD /* TagsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF937C1214E1BBA00F002DD /* TagsListTableViewController.swift */; };
 		6BF937C5214E1BBA00F002DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF937C3214E1BBA00F002DD /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6BF30135214EB79D000C2DAB /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		6BF30137214EB8C6000C2DAB /* ProductsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewController.swift; sourceTree = "<group>"; };
 		6BF937BC214E1BBA00F002DD /* Easify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF937BF214E1BBA00F002DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BF937C1214E1BBA00F002DD /* TagsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsListTableViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		6BF937B3214E1BBA00F002DD = {
 			isa = PBXGroup;
 			children = (
+				6BF30137214EB8C6000C2DAB /* ProductsCollectionViewController.swift */,
 				6BF937BE214E1BBA00F002DD /* Easify */,
 				6BF937D6214E1BBD00F002DD /* EasifyTests */,
 				6BF937E1214E1BBD00F002DD /* EasifyUITests */,
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				6BF937BF214E1BBA00F002DD /* AppDelegate.swift */,
+				6BF30135214EB79D000C2DAB /* ProductCollectionViewCell.swift */,
 				6BF937C1214E1BBA00F002DD /* TagsListTableViewController.swift */,
 				6BF937F2214E26B900F002DD /* TagsListModel.swift */,
 				6BF937F0214E219600F002DD /* ShopifyAPIStructs.swift */,
@@ -268,8 +274,10 @@
 				6BF937C2214E1BBA00F002DD /* TagsListTableViewController.swift in Sources */,
 				6BF937C0214E1BBA00F002DD /* AppDelegate.swift in Sources */,
 				6BF937F3214E26B900F002DD /* TagsListModel.swift in Sources */,
+				6BF30138214EB8C6000C2DAB /* ProductsCollectionViewController.swift in Sources */,
 				6BF937F1214E219600F002DD /* ShopifyAPIStructs.swift in Sources */,
 				6BF937C8214E1BBA00F002DD /* Easify.xcdatamodeld in Sources */,
+				6BF30136214EB79D000C2DAB /* ProductCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

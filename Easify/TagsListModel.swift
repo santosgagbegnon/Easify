@@ -13,30 +13,40 @@ class TagsListModel {
     private var allTags = [String:[Product]]()
     
     private func determineTags(products : Products) -> Bool{
-        guard let allProducts = products.products else {return false}
+        guard var allProducts = products.products else {return false}
         //Going through products and finding all tags, while only keeping the unique ones.
-        for (_,product) in allProducts.enumerated() {
-            let tags = product.tags?.components(separatedBy: ",") ?? []
-            for (index,_) in tags.enumerated() {
-                let tag = tags[index].trimmingCharacters(in: .whitespaces)
+        for (productIndex,_) in allProducts.enumerated() {
+            allProducts[productIndex].total_quantity = calculateTotalQuantity(product: allProducts[productIndex])
+            let tags = allProducts[productIndex].tags?.components(separatedBy: ",") ?? []
+            for (tagIndex,_) in tags.enumerated() {
+                let tag = tags[tagIndex].trimmingCharacters(in: .whitespaces)
                 if (allTags[tag] == nil){
-                    allTags[tag] = [product]
+                    allTags[tag] = [allProducts[productIndex]]
                 }
                 else{
-                    allTags[tag]?.append(product)
+                    allTags[tag]?.append(allProducts[productIndex])
                 }
                 uniqueProductTags.insert(tag)
             }
         }
         return true
     }
-    
+    private func calculateTotalQuantity(product : Product) -> Int { //Set total quanity property to a product
+        guard let productVariants = product.variants else {return 0}
+        var totalQuantity = 0
+        for (_,variant) in productVariants.enumerated() {
+            if let specificVariantQuantity = variant.inventory_quantity {
+                totalQuantity += specificVariantQuantity
+            }
+        }
+        return totalQuantity
+    }
 
     public func getTags() -> Set<String> {
         return uniqueProductTags
     }
-    public func getProductsWithTag(tag : String) -> [Product]?{
-        return allTags[tag]
+    public func getProductsWithTag(tag : String) -> [Product]{
+        return allTags[tag] ?? [Product]()
     }
     public func fetchShopifyProducts( closure : @escaping (Set<String>) -> Void) {
         let baseStringURL = "https://shopicruit.myshopify.com/admin/products.json?page=1&access_token=" + TagsListModel.SHOPIFY_ACCESS_TOKEN

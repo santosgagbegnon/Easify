@@ -13,10 +13,9 @@ class TagsListModel {
     private var allTags = [String:[Product]]()
     
     private func determineTags(products : Products) -> Bool{
-        guard let products = products.products else {return false}
-        //print(products)
+        guard let allProducts = products.products else {return false}
         //Going through products and finding all tags, while only keeping the unique ones.
-        for (_,product) in products.enumerated() {
+        for (_,product) in allProducts.enumerated() {
             let tags = product.tags?.components(separatedBy: ",") ?? []
             for (index,_) in tags.enumerated() {
                 let tag = tags[index].trimmingCharacters(in: .whitespaces)
@@ -29,21 +28,17 @@ class TagsListModel {
                 uniqueProductTags.insert(tag)
             }
         }
-        let keys = allTags.keys
-        for (_,key) in keys.enumerated() {
-            guard let productx = allTags[key] else {return false}
-            print("KEY: ",key , "\n")
-            for (_,it) in productx.enumerated(){
-                print(it.image?.src , "\n")
-
-            }
-            print("\n\n\n")
-
-        }
-        print("Total places",allTags.keys.count)
         return true
     }
-    public func fetchShopifyProducts() {
+    
+
+    public func getTags() -> Set<String> {
+        return uniqueProductTags
+    }
+    public func getProductsWithTag(tag : String) -> [Product]?{
+        return allTags[tag]
+    }
+    public func fetchShopifyProducts( closure : @escaping (Set<String>) -> Void) {
         let baseStringURL = "https://shopicruit.myshopify.com/admin/products.json?page=1&access_token=" + TagsListModel.SHOPIFY_ACCESS_TOKEN
         guard let requestURL = URL(string: baseStringURL) else {return}
         var x = URLRequest(url:requestURL)
@@ -57,9 +52,9 @@ class TagsListModel {
             let responseStatusCode = httpURLResponse?.statusCode
             if (responseStatusCode == 200){
                 do {
-                    //print(String(data: data, encoding: .utf8)!)
                     let products = try JSONDecoder().decode(Products.self, from: data)
                     _ = self.determineTags(products: products)
+                    closure(self.uniqueProductTags)
                 }
                 catch let JSONParsingError {
                     print("Error parsing Product Json:", JSONParsingError)

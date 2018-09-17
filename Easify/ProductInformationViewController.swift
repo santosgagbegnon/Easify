@@ -55,23 +55,21 @@ class ProductInformationViewController : UIViewController {
     }
     private func getAllText() -> NSMutableAttributedString{
         let text = NSMutableAttributedString (string: "")
-        //TO DO: ADD TOTAL QUANTITY
         guard let boldFont = UIFont(name: "HelveticaNeue-Bold", size: 17) else {return text}
         guard let regularFont = UIFont(name: "HelveticaNeue", size: 15 ) else {return text}
-        let subtitle = ["Quantity: ","Descrption: ","Product Type: ", "Upload Date: ", "Tags: ","Vendor: ","ID: ","Number of Variants: "]
-        let information = [String(product.total_quantity ?? 0),product.body_html ,product.product_type ,product.updated_at ,product.tags,product.vendor  ,String(product.id ??  -1),String(product.variants?.count ?? 0)]
-        if subtitle.count != information.count {return text}
-        for (index,_) in subtitle.enumerated() {
-            let currentBoldString = NSMutableAttributedString(string: subtitle[index], attributes: [NSAttributedStringKey.font:boldFont, NSAttributedStringKey.foregroundColor:UIColor.white])
+        let allInformation = ["Quantity":String(product.total_quantity ?? 0),"Descrption":product.body_html,"Product Type": product.product_type, "Upload Date" : product.updated_at, "Tags": product.tags,"Vendor" : product.vendor, "ID":String(product.id ?? 0),"Number of Variants:":String(product.variants?.count ?? 0)]
+        let informationKeys = allInformation.keys.sorted()
+        for(_,key) in informationKeys.enumerated() {
+            let currentBoldString = NSMutableAttributedString(string: key+": ", attributes: [NSAttributedStringKey.font:boldFont, NSAttributedStringKey.foregroundColor:UIColor.white])
             text.append(currentBoldString)
-
-            if let currentInfo = information[index] {
-                let currentRegString = NSMutableAttributedString(string: currentInfo+"\n\n\n", attributes: [NSAttributedStringKey.font:regularFont, NSAttributedStringKey.foregroundColor:UIColor.white])
+            if let keyInfo = allInformation[key] {
+                if keyInfo == nil {text.append(NSAttributedString(string: ""))}
+                let currentRegString = NSMutableAttributedString(string: keyInfo!+"\n\n\n", attributes: [NSAttributedStringKey.font:regularFont, NSAttributedStringKey.foregroundColor:UIColor.white])
                 text.append(currentRegString)
             }
             else{
                 text.append(NSAttributedString(string: "\n\n\n"))
-            } 
+            }
         }
         return text
     }
@@ -90,9 +88,6 @@ class ProductInformationViewController : UIViewController {
                 self.dismiss(animated: false, completion: nil)
             }
         }
-        
-
-
     }
     private func toggleProductInfoViewConstraints(disableConstraints : Bool){
         if (disableConstraints){
@@ -111,12 +106,3 @@ class ProductInformationViewController : UIViewController {
     }
 }
 
-extension UIView {
-    func addBasicGraidentBackground(firstColour : UIColor, secondColour: UIColor, locations : [NSNumber]){
-        let viewGradientLayer = CAGradientLayer()
-        viewGradientLayer.frame = self.bounds
-        viewGradientLayer.colors = [firstColour.cgColor,secondColour.cgColor]
-        viewGradientLayer.locations = locations
-        self.layer.insertSublayer(viewGradientLayer, at: 0)
-    }
-}

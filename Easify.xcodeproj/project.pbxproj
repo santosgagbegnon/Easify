@@ -109,11 +109,11 @@
 		6BF937BE214E1BBA00F002DD /* Easify */ = {
 			isa = PBXGroup;
 			children = (
-				6BF3013F214EE867000C2DAB /* ProductsCollectionViewController.swift */,
-				6BF3013D214EE284000C2DAB /* ProductInformationViewController.swift */,
 				6BF937CE214E1BBD00F002DD /* Info.plist */,
 				6BF937BF214E1BBA00F002DD /* AppDelegate.swift */,
 				6BF30135214EB79D000C2DAB /* ProductCollectionViewCell.swift */,
+				6BF3013D214EE284000C2DAB /* ProductInformationViewController.swift */,
+				6BF3013F214EE867000C2DAB /* ProductsCollectionViewController.swift */,
 				6BF937F0214E219600F002DD /* ShopifyAPIStructs.swift */,
 				6BF937F2214E26B900F002DD /* TagsListModel.swift */,
 				6BF937C1214E1BBA00F002DD /* TagsListTableViewController.swift */,

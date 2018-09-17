@@ -23,7 +23,7 @@ struct Product : Decodable {
     let images : [ProductImage]?
     let image : ProductImage?
     let options : [Option]?
-    let productType : String?
+    let product_type : String?
     let published_at : String?
     let published_scope : String?
     let tags : String?

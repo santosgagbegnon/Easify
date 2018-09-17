@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,40 +49,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5nu-Az-0TF">
-                            <size key="itemSize" width="337" height="335"/>
+                            <size key="itemSize" width="330" height="344"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="3" minY="10" maxX="3" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productCell" id="fnP-Bm-0yX" customClass="ProductCollectionViewCell" customModule="Easify" customModuleProvider="target">
-                                <rect key="frame" x="19" y="10" width="337" height="335"/>
+                                <rect key="frame" x="22.666666666666668" y="10" width="330" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="337" height="335"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="344"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m5m-gN-lQv">
-                                            <rect key="frame" x="39" y="251" width="258" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m5m-gN-lQv">
+                                            <rect key="frame" x="39" y="274" width="252" height="32.333333333333314"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-e9-szr">
-                                            <rect key="frame" x="77" y="286" width="182" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-e9-szr">
+                                            <rect key="frame" x="130" y="312.33333333333331" width="70.333333333333314" height="22.666666666666686"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeY-EE-uay">
-                                            <rect key="frame" x="57" y="12" width="222" height="222"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HeY-EE-uay">
+                                            <rect key="frame" x="73" y="48" width="184" height="184"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="0.14643012152777779" blue="0.31629774305555558" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="HeY-EE-uay" firstAttribute="top" secondItem="fnP-Bm-0yX" secondAttribute="top" constant="48" id="1Uv-1x-5mP"/>
+                                    <constraint firstItem="T8K-e9-szr" firstAttribute="top" secondItem="m5m-gN-lQv" secondAttribute="bottom" constant="6" id="Hmq-kp-kds"/>
+                                    <constraint firstAttribute="bottom" secondItem="T8K-e9-szr" secondAttribute="bottom" constant="9" id="QaM-SK-QzJ"/>
+                                    <constraint firstItem="m5m-gN-lQv" firstAttribute="centerX" secondItem="fnP-Bm-0yX" secondAttribute="centerX" id="U2g-hd-0k1"/>
+                                    <constraint firstItem="m5m-gN-lQv" firstAttribute="leading" secondItem="fnP-Bm-0yX" secondAttribute="leading" constant="39" id="aPj-Px-ogH"/>
+                                    <constraint firstItem="HeY-EE-uay" firstAttribute="leading" secondItem="fnP-Bm-0yX" secondAttribute="leading" constant="73" id="cyq-KS-85g"/>
+                                    <constraint firstItem="T8K-e9-szr" firstAttribute="centerX" secondItem="fnP-Bm-0yX" secondAttribute="centerX" id="ngH-B0-b2d"/>
+                                    <constraint firstItem="m5m-gN-lQv" firstAttribute="top" secondItem="HeY-EE-uay" secondAttribute="bottom" constant="42" id="r0K-Am-qGJ"/>
+                                    <constraint firstItem="HeY-EE-uay" firstAttribute="centerX" secondItem="fnP-Bm-0yX" secondAttribute="centerX" id="tlE-nQ-fIb"/>
+                                    <constraint firstItem="m5m-gN-lQv" firstAttribute="centerX" secondItem="HeY-EE-uay" secondAttribute="centerX" id="uQe-rQ-HWu"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="productImageView" destination="HeY-EE-uay" id="9R4-U7-etb"/>
                                     <outlet property="productNameLabel" destination="m5m-gN-lQv" id="VSe-9V-vvi"/>
@@ -97,46 +107,85 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2t-qZ-xPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517.5999999999999" y="26.53673163418291"/>
+            <point key="canvasLocation" x="1517.5999999999999" y="25.862068965517242"/>
         </scene>
         <!--Product Information View Controller-->
         <scene sceneID="p5D-sX-ake">
             <objects>
-                <viewController storyboardIdentifier="ProductInformationVC" id="Hff-Ig-Sps" customClass="ProductInformationViewController" customModule="Easify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductInformationVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="Hff-Ig-Sps" customClass="ProductInformationViewController" customModule="Easify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6TJ-y7-gr6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-d3-y2j">
-                                <rect key="frame" x="28" y="428" width="319" height="350"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuo-u4-oRe">
-                                <rect key="frame" x="42" y="58" width="293" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nq7-So-yDK">
-                                <rect key="frame" x="76" y="166" width="222" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHX-GN-up4">
+                                <rect key="frame" x="0.0" y="5" width="375" height="812"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-d3-y2j">
+                                        <rect key="frame" x="8" y="420" width="359" height="345"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nq7-So-yDK">
+                                        <rect key="frame" x="76" y="156" width="222" height="222"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="222" id="5Ds-Fd-lpd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vuo-u4-oRe">
+                                        <rect key="frame" x="41" y="62" width="293" height="34"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.035294117649999998" green="0.14901960780000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Vuo-u4-oRe" firstAttribute="leading" secondItem="DHX-GN-up4" secondAttribute="leading" constant="41" id="0MN-Se-XDI"/>
+                                    <constraint firstItem="Nq7-So-yDK" firstAttribute="top" secondItem="Vuo-u4-oRe" secondAttribute="bottom" constant="59.333333333333343" id="81m-pu-MBu"/>
+                                    <constraint firstAttribute="bottom" secondItem="B3U-d3-y2j" secondAttribute="bottom" constant="47" id="Bhs-Z7-ME0"/>
+                                    <constraint firstItem="B3U-d3-y2j" firstAttribute="top" secondItem="Nq7-So-yDK" secondAttribute="bottom" constant="42" id="BjW-sZ-xIE"/>
+                                    <constraint firstItem="Nq7-So-yDK" firstAttribute="width" secondItem="Vuo-u4-oRe" secondAttribute="height" multiplier="111:17" id="MlB-E7-6hx"/>
+                                    <constraint firstItem="B3U-d3-y2j" firstAttribute="leading" secondItem="DHX-GN-up4" secondAttribute="leading" constant="8" id="Yua-la-eG6"/>
+                                    <constraint firstItem="B3U-d3-y2j" firstAttribute="centerX" secondItem="DHX-GN-up4" secondAttribute="centerX" id="ePs-qH-gYr"/>
+                                    <constraint firstItem="Vuo-u4-oRe" firstAttribute="top" secondItem="DHX-GN-up4" secondAttribute="top" constant="62" id="eYH-Iq-RzU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nq7-So-yDK" secondAttribute="trailing" constant="77" id="ghQ-Xc-Qb4"/>
+                                    <constraint firstItem="Nq7-So-yDK" firstAttribute="leading" secondItem="DHX-GN-up4" secondAttribute="leading" constant="76" id="oyR-62-3QO"/>
+                                    <constraint firstItem="Nq7-So-yDK" firstAttribute="centerX" secondItem="Vuo-u4-oRe" secondAttribute="centerX" id="zfQ-ge-U3w"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="X75-4g-YB2" appends="YES" id="fqA-BT-uD6"/>
+                                </connections>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.035294117647058823" green="0.14901960784313725" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.035294117647058823" green="0.14901960784313725" blue="0.31764705882352939" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DHX-GN-up4" firstAttribute="centerY" secondItem="Cv4-EO-Ia1" secondAttribute="centerY" id="QxP-A7-BHu"/>
+                            <constraint firstItem="DHX-GN-up4" firstAttribute="centerX" secondItem="Cv4-EO-Ia1" secondAttribute="centerX" id="bRU-Aq-1bA"/>
+                            <constraint firstItem="DHX-GN-up4" firstAttribute="height" secondItem="6TJ-y7-gr6" secondAttribute="height" id="wda-2V-zmM"/>
+                            <constraint firstItem="DHX-GN-up4" firstAttribute="width" secondItem="6TJ-y7-gr6" secondAttribute="width" id="zcs-xq-Psz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cv4-EO-Ia1"/>
                     </view>
                     <connections>
                         <outlet property="productImageView" destination="Nq7-So-yDK" id="G8y-Hk-827"/>
+                        <outlet property="productInfoViewCenterToSafeAreaX" destination="bRU-Aq-1bA" id="KPw-0i-PLc"/>
+                        <outlet property="productInfoViewCenterToSafeAreaY" destination="QxP-A7-BHu" id="mSg-2F-QZD"/>
+                        <outlet property="productInfoViewEqualHeightToSuperView" destination="wda-2V-zmM" id="zoJ-Do-wZv"/>
+                        <outlet property="productInfoViewEqualWidthToSuperView" destination="zcs-xq-Psz" id="6wO-nB-t28"/>
                         <outlet property="productInformationTextView" destination="B3U-d3-y2j" id="1NE-Gi-ijZ"/>
+                        <outlet property="productInformationView" destination="DHX-GN-up4" id="2ZX-z8-sHf"/>
                         <outlet property="productNameLabel" destination="Vuo-u4-oRe" id="YrU-GR-XuX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGm-0Q-emQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="X75-4g-YB2">
+                    <connections>
+                        <action selector="onProductInfoViewPanGesture:" destination="Hff-Ig-Sps" id="h4S-HD-Gcg"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2189.5999999999999" y="26.600985221674879"/>
         </scene>

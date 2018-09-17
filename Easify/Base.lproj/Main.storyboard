@@ -134,7 +134,7 @@
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nq7-So-yDK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nq7-So-yDK">
                                         <rect key="frame" x="76" y="127" width="222" height="222"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Nq7-So-yDK" secondAttribute="height" multiplier="1:1" id="DQh-NP-y9V"/>

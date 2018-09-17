@@ -49,9 +49,13 @@ class ProductInformationViewController : UIViewController {
     override func viewDidLoad() {
         navigationController?.navigationBar.isHidden = true
         productImageView.image = productImage
+        productImageView.layer.cornerRadius = (productImageView.frame.size.width/2)
+        productImageView.layer.borderColor = UIColor.white.cgColor
+        productImageView.layer.borderWidth = 7
+        productImageView.clipsToBounds = true
+        productImageView.contentMode = UIViewContentMode.scaleAspectFill
         productNameLabel.text = product.title
         productInformationTextView.attributedText = getAllText()
-
     }
     private func getAllText() -> NSMutableAttributedString{
         let text = NSMutableAttributedString (string: "")
@@ -105,4 +109,3 @@ class ProductInformationViewController : UIViewController {
         self.productInformationView.layoutIfNeeded()
     }
 }
-

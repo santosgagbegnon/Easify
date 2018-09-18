@@ -61,7 +61,7 @@ class ProductInformationViewController : UIViewController {
         let text = NSMutableAttributedString (string: "")
         guard let boldFont = UIFont(name: "HelveticaNeue-Bold", size: 17) else {return text}
         guard let regularFont = UIFont(name: "HelveticaNeue", size: 15 ) else {return text}
-        let allInformation = ["Quantity":String(product.total_quantity ?? 0),"Descrption":product.body_html,"Product Type": product.product_type, "Upload Date" : product.updated_at, "Tags": product.tags,"Vendor" : product.vendor, "ID":String(product.id ?? 0),"Number of Variants:":String(product.variants?.count ?? 0)]
+        let allInformation = ["Quantity":String(product.total_quantity ?? 0),"Description":product.body_html,"Product Type": product.product_type, "Upload Date" : product.updated_at, "Tags": product.tags,"Vendor" : product.vendor, "ID":String(product.id ?? 0),"Number of Variants:":String(product.variants?.count ?? 0)]
         let informationKeys = allInformation.keys.sorted()
         for(_,key) in informationKeys.enumerated() {
             let currentBoldString = NSMutableAttributedString(string: key+": ", attributes: [NSAttributedStringKey.font:boldFont, NSAttributedStringKey.foregroundColor:UIColor.white])

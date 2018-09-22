@@ -18,14 +18,18 @@ class ProductInformationViewController : UIViewController {
     @IBOutlet  var productInfoViewCenterToSuperViewX: NSLayoutConstraint!
     @IBOutlet  var productInfoViewEqualHeightToSuperView: NSLayoutConstraint!
     @IBOutlet  var productInfoViewEqualWidthToSuperView: NSLayoutConstraint!
+    @IBOutlet weak var exitButton: UIButton!
+    
     public var cell : ProductCollectionViewCell!
     public var productImage : UIImage! //TO DO: Add default image
     public var product : Product!
     override func viewDidLayoutSubviews() {
         productInformationTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //Disable contraints to allow resizing animation and hides UI elements
         toggleProductInfoViewConstraints(disableConstraints: true)
         productInformationView.frame = cell.convert(cell.bounds,to:productInformationView)
         productInformationView.layoutIfNeeded()
@@ -36,6 +40,8 @@ class ProductInformationViewController : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
+        exitButton.reshapeViewToCircle(withBorderWidth: 3, borderColour: UIColor.white.cgColor)
+        //Resizing animation on click
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.curveEaseOut], animations: {
             self.toggleProductInfoViewConstraints(disableConstraints: false)
         }, completion: {(_) in
@@ -49,14 +55,12 @@ class ProductInformationViewController : UIViewController {
     override func viewDidLoad() {
         navigationController?.navigationBar.isHidden = true
         productImageView.image = productImage
-        productImageView.layer.cornerRadius = (productImageView.frame.size.width/2)
-        productImageView.layer.borderColor = UIColor.white.cgColor
-        productImageView.layer.borderWidth = 7
-        productImageView.clipsToBounds = true
-        productImageView.contentMode = UIViewContentMode.scaleAspectFill
+        productImageView.reshapeViewToCircle(withBorderWidth: 7, borderColour: UIColor.white.cgColor)
         productNameLabel.text = product.title
         productInformationTextView.attributedText = getAllText()
     }
+    
+    // Formats the information from the Shopify Product Api to be displayed on product information view
     private func getAllText() -> NSMutableAttributedString{
         let text = NSMutableAttributedString (string: "")
         guard let boldFont = UIFont(name: "HelveticaNeue-Bold", size: 17) else {return text}
@@ -77,7 +81,7 @@ class ProductInformationViewController : UIViewController {
         }
         return text
     }
-
+    //Closes view when user performs a panning gesture
     @IBAction func onProductInfoViewPanGesture(_ sender: UIPanGestureRecognizer) {
         let senderView = sender.view!
         senderView.center.y = senderView.center.y + sender.translation(in: senderView).y
@@ -85,14 +89,26 @@ class ProductInformationViewController : UIViewController {
             senderView.center = self.view.superview!.center
         }
         if (sender.state == UIGestureRecognizerState.ended){
-            UIView.animate(withDuration: 0.5, animations: {
-                senderView.transform = CGAffineTransform(translationX: 0, y: -100)
-                senderView.alpha = 0
-            }) { (_) in
-                self.dismiss(animated: false, completion: nil)
-            }
+            dismissProductInfoViewWithAnimation()
         }
     }
+    
+    @IBAction func onExitButtonPressed(_ sender: UIButton) {
+        dismissProductInfoViewWithAnimation()
+        
+    }
+    private func dismissProductInfoViewWithAnimation() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.productInformationView.transform = CGAffineTransform(translationX: 0, y: -100)
+            self.productInformationView.alpha = 0
+        }) { (_) in
+            self.dismiss(animated: false, completion: nil)
+        }
+    }
+    
+
+    
+    //Allows constraints for the ProductInfoView to be turn on and off to enable/disable animations
     private func toggleProductInfoViewConstraints(disableConstraints : Bool){
         if (disableConstraints){
             productInfoViewEqualHeightToSuperView.isActive = false
@@ -107,5 +123,17 @@ class ProductInformationViewController : UIViewController {
             self.productInfoViewEqualWidthToSuperView.isActive = true
         }
         self.productInformationView.layoutIfNeeded()
+    }
+}
+
+extension UIView {
+    //Transforms a view into a circular view
+    func reshapeViewToCircle(withBorderWidth borderWidth: CGFloat, borderColour:CGColor){
+        self.layer.cornerRadius = (self.frame.size.width/2)
+        self.layer.borderColor = borderColour
+        self.layer.borderWidth = borderWidth
+        self.clipsToBounds = true
+        self.contentMode = UIViewContentMode.scaleAspectFill
+        
     }
 }

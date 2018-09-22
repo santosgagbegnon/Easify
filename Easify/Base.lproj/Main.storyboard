@@ -121,7 +121,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHX-GN-up4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-d3-y2j">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-d3-y2j">
                                         <rect key="frame" x="8" y="396" width="359" height="224"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -140,6 +140,19 @@
                                             <constraint firstAttribute="width" secondItem="Nq7-So-yDK" secondAttribute="height" multiplier="1:1" id="DQh-NP-y9V"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzf-Ee-3K4">
+                                        <rect key="frame" x="19" y="62" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Jzf-Ee-3K4" secondAttribute="height" multiplier="1:1" id="A7l-Ba-0TJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onExitButtonPressed:" destination="Hff-Ig-Sps" eventType="touchUpInside" id="7vp-Do-nhu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="BackgroundBlue"/>
                                 <gestureRecognizers/>
@@ -148,7 +161,9 @@
                                     <constraint firstItem="Nq7-So-yDK" firstAttribute="top" secondItem="Vuo-u4-oRe" secondAttribute="bottom" constant="30" id="81m-pu-MBu"/>
                                     <constraint firstAttribute="bottom" secondItem="B3U-d3-y2j" secondAttribute="bottom" constant="47" id="Bhs-Z7-ME0"/>
                                     <constraint firstItem="B3U-d3-y2j" firstAttribute="top" secondItem="Nq7-So-yDK" secondAttribute="bottom" constant="47" id="DU7-QL-cCu"/>
+                                    <constraint firstItem="Jzf-Ee-3K4" firstAttribute="top" secondItem="DHX-GN-up4" secondAttribute="top" constant="62" id="FJP-Wh-iBb"/>
                                     <constraint firstItem="B3U-d3-y2j" firstAttribute="leading" secondItem="DHX-GN-up4" secondAttribute="leading" constant="8" id="Yua-la-eG6"/>
+                                    <constraint firstItem="Jzf-Ee-3K4" firstAttribute="leading" secondItem="DHX-GN-up4" secondAttribute="leading" constant="19" id="aRG-v5-17I"/>
                                     <constraint firstItem="B3U-d3-y2j" firstAttribute="centerX" secondItem="DHX-GN-up4" secondAttribute="centerX" id="ePs-qH-gYr"/>
                                     <constraint firstItem="Vuo-u4-oRe" firstAttribute="top" secondItem="DHX-GN-up4" secondAttribute="top" constant="62" id="eYH-Iq-RzU"/>
                                     <constraint firstAttribute="trailing" secondItem="Nq7-So-yDK" secondAttribute="trailing" constant="77" id="ghQ-Xc-Qb4"/>
@@ -170,6 +185,7 @@
                         <viewLayoutGuide key="safeArea" id="Cv4-EO-Ia1"/>
                     </view>
                     <connections>
+                        <outlet property="exitButton" destination="Jzf-Ee-3K4" id="20N-Cy-iiH"/>
                         <outlet property="productImageView" destination="Nq7-So-yDK" id="G8y-Hk-827"/>
                         <outlet property="productInfoViewCenterToSuperViewX" destination="bRU-Aq-1bA" id="KPw-0i-PLc"/>
                         <outlet property="productInfoViewCenterToSuperViewY" destination="QxP-A7-BHu" id="mSg-2F-QZD"/>

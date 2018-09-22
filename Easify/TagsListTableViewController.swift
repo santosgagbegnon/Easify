@@ -33,7 +33,7 @@ class TagsListTableViewController: UITableViewController{
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "tagCell")
         cell.textLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
-        cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.textColor =  UIColor.black
         cell.textLabel?.text = "#"+listOfTags[indexPath.row]
         return cell
     }

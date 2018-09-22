@@ -18,9 +18,6 @@ class ProductsCollectionViewController : UICollectionViewController {
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as! ProductCollectionViewCell
-      
-        cell.addBasicGraidentBackground(firstColour: UIColor(named: "OffWhite") ?? UIColor.white, secondColour: UIColor(named: "BackgroundBlue") ?? UIColor.blue, locations: [0.0,0.95])
-        cell.layer.cornerRadius = 6
         if let imageURL = URL(string: products[indexPath.row].image?.src ?? "") {
             let downloadImageTask = URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
                 if let productImage = UIImage(data: data ?? Data()) {
@@ -36,6 +33,7 @@ class ProductsCollectionViewController : UICollectionViewController {
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //Transfers view to the product info view corresponding to the cell that was clicked
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = mainStoryboard.instantiateViewController(withIdentifier: "ProductInformationVC") as! ProductInformationViewController
         let currentCell = collectionView.cellForItem(at: indexPath) as! ProductCollectionViewCell
